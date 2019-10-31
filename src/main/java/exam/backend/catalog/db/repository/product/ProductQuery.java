@@ -15,9 +15,6 @@ import javax.persistence.criteria.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * @author Kemal Acar
- */
 @Component
 public class ProductQuery extends AbstractSpecification<Product, ProductFilterDto> {
 

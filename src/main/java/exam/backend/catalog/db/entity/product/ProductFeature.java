@@ -9,12 +9,6 @@ import javax.persistence.*;
 
 import static exam.backend.common.constant.GlobalConstants.DB_PREFIX;
 
-/**
- * 
- * @author Musa Ay
- *
- */
-
 @Entity
 @Table(name = DB_PREFIX + "PRODUCT_FEATURES")
 @Data

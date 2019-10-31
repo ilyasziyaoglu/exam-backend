@@ -9,12 +9,6 @@ import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 
-/**
- * 
- * @author Musa Ay
- *
- */
-
 @Entity
 @Table(name = GlobalConstants.DB_PREFIX + "PERMISSIONS")
 @Data

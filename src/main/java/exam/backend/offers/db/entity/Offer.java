@@ -18,11 +18,6 @@ import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * @author Musa Ay
- *
- * @updatedby Ilyas Ziyaoglu
- */
 
 @Entity
 @Table(name = GlobalConstants.DB_PREFIX + "OFFERS")

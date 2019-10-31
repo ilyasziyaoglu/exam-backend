@@ -5,11 +5,7 @@ import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
-/**
- * 
- * @author Musa Ay
- *
- */
+
 
 public class GlobalConstants {
 

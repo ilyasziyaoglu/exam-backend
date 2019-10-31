@@ -16,11 +16,6 @@ import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * 
- * @author Musa Ay
- *
- */
 
 @Entity
 @Table(name = GlobalConstants.DB_PREFIX + "PRODUCTS")

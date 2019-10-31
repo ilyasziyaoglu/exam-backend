@@ -4,9 +4,6 @@ import java.math.BigInteger;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-/**
- * @author Muhammed Alagoz
- */
 public class PropertyUtil {
 
 	protected static ConcurrentHashMap<String, String> properties = new ConcurrentHashMap<>();

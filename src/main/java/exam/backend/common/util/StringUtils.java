@@ -5,9 +5,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.StringTokenizer;
 
-/**
- * @author Mehmet Kelleci
- */
 public class StringUtils extends org.apache.commons.lang3.StringUtils {
 
 	public static final String HTML_LINE_BREAK = "<br/>";

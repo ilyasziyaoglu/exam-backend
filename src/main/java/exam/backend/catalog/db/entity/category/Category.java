@@ -15,10 +15,6 @@ import java.util.Set;
 
 import static exam.backend.common.constant.GlobalConstants.DB_PREFIX;
 
-/**
- * @author Musa Ay
- */
-
 @Entity
 @Table(name = DB_PREFIX + "CATEGORIES")
 @Data

@@ -13,12 +13,6 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.time.ZonedDateTime;
 
-/**
- * 
- * @author Musa Ay
- *
- */
-
 @Data
 @EqualsAndHashCode(callSuper = false)
 @MappedSuperclass
@@ -30,7 +24,7 @@ public abstract class AbstractEntity implements Serializable {
 
 	@CreatedDate
 	@Column(name = "created_date", nullable = false, updatable = false)
-	private ZonedDateTime createdDate;
+	private ZonedDateTime createdDate = ZonedDateTime.now();
 
 	@LastModifiedDate
 	@Column(name = "last_modified_date")

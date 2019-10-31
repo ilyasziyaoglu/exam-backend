@@ -9,10 +9,6 @@ import lombok.EqualsAndHashCode;
 import javax.persistence.*;
 import java.time.ZonedDateTime;
 
-/**
- * @author Ilyas Ziyaoglu
- */
-
 @Entity
 @Table(name = GlobalConstants.DB_PREFIX + "OFFERS_HISTORY")
 @Data
