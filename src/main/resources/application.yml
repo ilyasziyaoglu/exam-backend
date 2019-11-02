@@ -22,4 +22,4 @@
           ddl-auto: create
   mail:
     protocol: smtp
-    host: smtp.turkcell.com.tr
+    host: smtp.gmail.com
