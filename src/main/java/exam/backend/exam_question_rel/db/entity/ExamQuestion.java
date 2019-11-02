@@ -1,11 +1,14 @@
 package exam.backend.exam_question_rel.db.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import exam.backend.common.constant.GlobalConstants;
 import exam.backend.common.db.entity.AbstractEntity;
+import exam.backend.questions.db.entity.Questions;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = GlobalConstants.DB_PREFIX + "EXAM_QUESTION")
@@ -27,5 +30,10 @@ public class ExamQuestion extends AbstractEntity {
 
     @Column(name = "option_count")
     private int optionCount;
+
+    @JsonManagedReference
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "question_id", nullable = false)
+    private Questions question;
 
 }

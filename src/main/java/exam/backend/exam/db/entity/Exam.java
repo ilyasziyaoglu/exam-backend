@@ -33,11 +33,6 @@ public class Exam extends AbstractEntity {
 	@Column
 	private String description;
 
-	@JsonManagedReference
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "exam_id")
-	private List<ExamQuestion> examQuestions;
-
 	@Column(name="date_time")
 	private ZonedDateTime dateTime;
 
@@ -49,5 +44,10 @@ public class Exam extends AbstractEntity {
 
 	@Column(name = "exam_type")
 	private String examType;
+
+	@JsonManagedReference
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(name = "exam_id")
+	private List<ExamQuestion> examQuestions;
 
 }
