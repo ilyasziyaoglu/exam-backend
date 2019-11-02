@@ -78,27 +78,4 @@ public class Offer extends AbstractEntity {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "to_company_id", nullable = false)
 	private Company toCompany;
-
-	public Long getOfferProductId(){
-		return getProduct().getId();
-	}
-
-	public String getProductNumber(){
-		return getProduct().getProductNumber();
-	}
-
-	public String getProductName() { return getProduct().getName(); }
-
-	public Long getOfferUserId(){
-		return getUser().getId();
-	}
-
-	public Set<Distributor> getDistributors() { return getProduct().getDistributors(); }
-
-	public Long getCompanyId() { return getFromCompany().getId(); }
-
-
-	public String getUserName(){
-		return getUser().getUsername();
-	}
 }

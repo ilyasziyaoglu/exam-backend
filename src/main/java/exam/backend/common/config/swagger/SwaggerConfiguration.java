@@ -24,8 +24,8 @@ public class SwaggerConfiguration {
 	}
 
 	private ApiInfo apiInfo() {
-		return new ApiInfo("Online Exam Api", "Online Exam REST API", "1.0.0", "google.com",
-				new Contact("Online Exam Team", "google.com", "ilyasziyaoglu@gmail.com"), "Online Exam",
+		return new ApiInfo("Online ExamQuestion Api", "Online ExamQuestion REST API", "1.0.0", "google.com",
+				new Contact("Online ExamQuestion Team", "google.com", "ilyasziyaoglu@gmail.com"), "Online ExamQuestion",
 				"google.com", Collections.emptyList());
 	}
 }
