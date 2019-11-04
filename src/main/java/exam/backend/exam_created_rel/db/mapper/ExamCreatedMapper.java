@@ -1,13 +1,15 @@
-package exam.backend.created_exam_rel.db.mapper;
+package exam.backend.exam_created_rel.db.mapper;
 
 
 import exam.backend.common.db.mapper.BaseMapper;
-import exam.backend.created_exam_rel.db.entity.UserExam;
-import exam.client.user_exam_rel.request.UserExamRequest;
-import exam.client.user_exam_rel.response.UserExamResponse;
+import exam.backend.exam_created_rel.db.entity.ExamCreated;
+import exam.client.exam_created_rel.request.ExamCreatedRequest;
+import exam.client.exam_created_rel.response.ExamCreatedResponse;
+import exam.client.exam_entered_rel.request.ExamEnteredRequest;
+import exam.client.exam_entered_rel.response.ExamEnteredResponse;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
-public interface UserExamMapper extends BaseMapper<UserExam, UserExamRequest, UserExamResponse> {
+public interface ExamCreatedMapper extends BaseMapper<ExamCreated, ExamCreatedRequest, ExamCreatedResponse> {
 
 }

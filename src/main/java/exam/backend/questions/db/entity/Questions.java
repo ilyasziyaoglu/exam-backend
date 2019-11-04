@@ -33,7 +33,7 @@ public class Questions extends AbstractEntity {
     private String subject;
 
     @JsonManagedReference
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "question_id")
     private List<Options> options;
 }

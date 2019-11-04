@@ -1,10 +1,10 @@
-package exam.backend.created_exam_rel.db.repository;
+package exam.backend.exam_created_rel.db.repository;
 
 import exam.backend.common.db.repository.BaseRepository;
-import exam.backend.created_exam_rel.db.entity.UserExam;
+import exam.backend.exam_created_rel.db.entity.ExamCreated;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface UserExamRepository extends BaseRepository<UserExam> {
+public interface ExamCreatedRepository extends BaseRepository<ExamCreated> {
 
 }

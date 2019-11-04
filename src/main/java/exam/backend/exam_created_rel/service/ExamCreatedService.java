@@ -1,21 +1,21 @@
-package exam.backend.created_exam_rel.service;
+package exam.backend.exam_created_rel.service;
 
 import exam.backend.common.service.BaseEntityService;
-import exam.backend.created_exam_rel.db.entity.UserExam;
-import exam.backend.created_exam_rel.db.repository.UserExamRepository;
+import exam.backend.exam_created_rel.db.entity.ExamCreated;
+import exam.backend.exam_created_rel.db.repository.ExamCreatedRepository;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
 @Service
-public class UserExamService extends BaseEntityService<UserExam, UserExamRepository> {
+public class ExamCreatedService extends BaseEntityService<ExamCreated, ExamCreatedRepository> {
 
     @Resource
-    private UserExamRepository userExamRepository;
+    private ExamCreatedRepository examCreatedRepository;
 
     @Override
-    public UserExamRepository getRepository() {
-        return userExamRepository;
+    public ExamCreatedRepository getRepository() {
+        return examCreatedRepository;
     }
 
 }

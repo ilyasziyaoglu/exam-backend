@@ -32,7 +32,7 @@ public class ExamQuestion extends AbstractEntity {
     private int optionCount;
 
     @JsonManagedReference
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "question_id", nullable = false)
     private Questions question;
 

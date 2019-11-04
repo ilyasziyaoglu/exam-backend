@@ -1,14 +1,12 @@
-package exam.backend.user_exam_rel.controller;
+package exam.backend.exam_entered_rel.controller;
 
 import exam.backend.common.controller.BaseEntityController;
-import exam.backend.user_exam_rel.db.entity.UserExam;
-import exam.backend.user_exam_rel.db.mapper.UserExamMapper;
-import exam.backend.user_exam_rel.db.repository.UserExamRepository;
-import exam.backend.user_exam_rel.service.UserExamService;
-import exam.client.exam_question_rel.request.ExamQuestionRequest;
-import exam.client.exam_question_rel.response.ExamQuestionResponse;
-import exam.client.user_exam_rel.request.UserExamRequest;
-import exam.client.user_exam_rel.response.UserExamResponse;
+import exam.backend.exam_entered_rel.db.entity.ExamEntered;
+import exam.backend.exam_entered_rel.db.mapper.ExamEnteredMapper;
+import exam.backend.exam_entered_rel.db.repository.ExamEnteredRepository;
+import exam.backend.exam_entered_rel.service.ExamEnteredService;
+import exam.client.exam_entered_rel.request.ExamEnteredRequest;
+import exam.client.exam_entered_rel.response.ExamEnteredResponse;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -17,22 +15,22 @@ import javax.annotation.Resource;
 //import exam.backend.common.config.security.TokenUtils;
 
 @RestController
-@RequestMapping("/user-exam")
-public class UserExamController extends BaseEntityController<UserExamRequest, UserExamResponse, UserExam, UserExamRepository, UserExamService, UserExamMapper> {
+@RequestMapping("/exam-entered")
+public class ExamEnteredController extends BaseEntityController<ExamEnteredRequest, ExamEnteredResponse, ExamEntered, ExamEnteredRepository, ExamEnteredService, ExamEnteredMapper> {
 
     @Resource
-    private UserExamService userExamService;
+    private ExamEnteredService examEnteredService;
 
     @Resource
-    private UserExamMapper userExamMapper;
+    private ExamEnteredMapper examEnteredMapper;
 
     @Override
-    protected UserExamService getService() {
-        return userExamService;
+    protected ExamEnteredService getService() {
+        return examEnteredService;
     }
 
     @Override
-    protected UserExamMapper getMapper() {
-        return userExamMapper;
+    protected ExamEnteredMapper getMapper() {
+        return examEnteredMapper;
     }
 }
