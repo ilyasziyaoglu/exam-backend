@@ -46,11 +46,6 @@ public class Exam extends AbstractEntity {
 	private ExamType examType;
 
 	@JsonManagedReference
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "exam_id")
-	private List<ExamQuestion> examQuestions;
-
-	@JsonManagedReference
 	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "owner_id")
 	private Users owner;
