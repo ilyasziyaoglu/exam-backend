@@ -1,6 +1,6 @@
 package exam.backend.common.util;
 
-import exam.backend.offers.db.entity.Offer;
+import exam.backend.old.offers.db.entity.Offer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

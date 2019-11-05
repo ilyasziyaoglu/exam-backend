@@ -3,8 +3,8 @@ package exam.backend.questions.db.entity;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import exam.backend.common.constant.GlobalConstants;
 import exam.backend.common.db.entity.AbstractEntity;
-import exam.backend.exam_question_rel.db.entity.ExamQuestion;
 import exam.backend.options.db.entity.Options;
+import exam.backend.question_subject.QuestionSubject;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -29,11 +29,13 @@ public class Questions extends AbstractEntity {
     @Column(name = "image_url")
     private String imageUrl;
 
-    @Column(name = "subject")
-    private String subject;
-
     @JsonManagedReference
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "question_id")
     private List<Options> options;
+
+    @JsonManagedReference
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "question_subject_id")
+    private QuestionSubject subject;
 }

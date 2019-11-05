@@ -3,6 +3,7 @@ package exam.backend.exam_question_rel.db.entity;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import exam.backend.common.constant.GlobalConstants;
 import exam.backend.common.db.entity.AbstractEntity;
+import exam.backend.exam.db.entity.Exam;
 import exam.backend.questions.db.entity.Questions;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -35,5 +36,10 @@ public class ExamQuestion extends AbstractEntity {
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "question_id", nullable = false)
     private Questions question;
+
+    @JsonManagedReference
+    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "exam_id", nullable = false)
+    private Exam exam;
 
 }

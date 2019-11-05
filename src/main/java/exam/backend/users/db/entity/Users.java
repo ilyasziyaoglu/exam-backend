@@ -24,8 +24,7 @@ public class Users extends AbstractEntity {
     @GeneratedValue(generator = GlobalConstants.DB_PREFIX + "USERS_ID_GEN", strategy = GenerationType.SEQUENCE)
     private int id;
 
-    @Column(name = "user_name")
-    private String userName;
+    private String username;
 
     @Column(name = "password_hash")
     private String passwordHash;
@@ -42,8 +41,8 @@ public class Users extends AbstractEntity {
     @Column(name = "user_type")
     private int userType;
 
-    @Column(name = "is_active")
-    private boolean isActive;
+    @Column(name = "is_activated")
+    private boolean isActivated;
 
     @Column(name = "gender")
     private boolean gender;
@@ -54,13 +53,11 @@ public class Users extends AbstractEntity {
     @Column(name = "money_balance")
     private float moneyBalance;
 
-    @JsonManagedReference
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id")
-    private List<ExamEntered> examsEntered;
+    @Column(name = "register_date")
+    private Date registerDate;
 
     @JsonManagedReference
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
-    private List<Exam> examsCreated;
+    private List<ExamEntered> examsEntered;
 }
