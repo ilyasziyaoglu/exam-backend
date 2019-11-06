@@ -40,14 +40,12 @@ public class Exam extends AbstractEntity {
 	@Column(name = "question_count")
 	private int questionCount;
 
-	@JsonManagedReference
 	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
 	@JoinColumn(name = "exam_type")
 	private ExamType examType;
 
-	@JsonManagedReference
 	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "owner_id")
-	private Users owner;
+	@JoinColumn(name = "exam_id")
+	private List<ExamQuestion> examQuestions;
 
 }

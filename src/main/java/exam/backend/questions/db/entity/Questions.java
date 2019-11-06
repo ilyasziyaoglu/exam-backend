@@ -29,12 +29,10 @@ public class Questions extends AbstractEntity {
     @Column(name = "image_url")
     private String imageUrl;
 
-    @JsonManagedReference
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "question_id")
     private List<Options> options;
 
-    @JsonManagedReference
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "question_subject_id")
     private QuestionSubject subject;

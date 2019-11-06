@@ -11,7 +11,6 @@ import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.util.HashMap;
-import java.util.HashSet;
 
 @Entity
 @Table(name = GlobalConstants.DB_PREFIX + "EXAM_ENTERED")
@@ -34,13 +33,11 @@ public class ExamEntered extends AbstractEntity {
     @Column(name = "exam_duration")
     private int examDuration;
 
-    @JsonManagedReference
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "exam_id", nullable = false)
     private Exam exam;
 
-    @JsonManagedReference
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "exam_entered_id")
+    @ElementCollection(fetch=FetchType.LAZY)
+    @Column(name= GlobalConstants.DB_PREFIX + "USER_ANSWERS")
     private HashMap<Questions, Options> userAnswers;
 }

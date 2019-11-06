@@ -32,14 +32,8 @@ public class ExamQuestion extends AbstractEntity {
     @Column(name = "option_count")
     private int optionCount;
 
-    @JsonManagedReference
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "question_id", nullable = false)
     private Questions question;
-
-    @JsonManagedReference
-    @ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    @JoinColumn(name = "exam_id", nullable = false)
-    private Exam exam;
 
 }

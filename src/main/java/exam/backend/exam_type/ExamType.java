@@ -19,6 +19,6 @@ public class ExamType extends AbstractEntity {
     @GeneratedValue(generator = GlobalConstants.DB_PREFIX + "EXAM_TYPE_GEN", strategy = GenerationType.SEQUENCE)
     private int id;
 
-    @Column(name = "type_body")
-    private String typeBody;
+    @Column(name = "name")
+    private String name;
 }

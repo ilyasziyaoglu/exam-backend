@@ -1,10 +1,10 @@
 package exam.backend.users.db.entity;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import exam.backend.common.constant.GlobalConstants;
 import exam.backend.common.db.entity.AbstractEntity;
 import exam.backend.exam.db.entity.Exam;
 import exam.backend.exam_entered_rel.db.entity.ExamEntered;
+import exam.backend.pool.db.entity.Pool;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -53,11 +53,15 @@ public class Users extends AbstractEntity {
     @Column(name = "money_balance")
     private float moneyBalance;
 
-    @Column(name = "register_date")
-    private Date registerDate;
-
-    @JsonManagedReference
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
     private List<ExamEntered> examsEntered;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
+    private List<Exam> examsCreated;
+
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id")
+    private List<Pool> pools;
 }

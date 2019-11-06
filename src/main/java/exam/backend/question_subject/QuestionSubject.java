@@ -19,6 +19,6 @@ public class QuestionSubject extends AbstractEntity {
     @GeneratedValue(generator = GlobalConstants.DB_PREFIX + "QUESTION_SUBJECT_ID_GEN", strategy = GenerationType.SEQUENCE)
     private int id;
 
-    @Column(name = "subject_body")
-    private String subjectBody;
+    @Column(name = "name")
+    private String name;
 }
