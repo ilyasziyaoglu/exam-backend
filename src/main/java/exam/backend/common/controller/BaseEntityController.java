@@ -84,7 +84,7 @@ public abstract class BaseEntityController<Request extends AbstractRequest, Resp
         return jsonResponse;
     }
 
-    @GetMapping("/list")
+    @GetMapping("/all")
     public JsonResponse<List<Response>> getAll() {
         JsonResponse<List<Response>> jsonResponse = new JsonResponse<>();
         ServiceResult<List<Entity>> serviceResult = getService().getAll();

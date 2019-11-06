@@ -2,7 +2,6 @@ package exam.backend.options.db.entity;
 
 import exam.backend.common.constant.GlobalConstants;
 import exam.backend.common.db.entity.AbstractEntity;
-import exam.backend.questions.db.entity.Questions;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -18,7 +17,7 @@ public class Options extends AbstractEntity {
     @Column(name = "id", nullable = false)
     @SequenceGenerator(name = GlobalConstants.DB_PREFIX + "OPTIONS_ID_GEN", sequenceName = GlobalConstants.DB_PREFIX + "OPTIONS_ID_SEQ", allocationSize = 1)
     @GeneratedValue(generator = GlobalConstants.DB_PREFIX + "OPTIONS_ID_GEN", strategy = GenerationType.SEQUENCE)
-    private int id;
+    private Long id;
 
     @Column(name = "body")
     private String body;
