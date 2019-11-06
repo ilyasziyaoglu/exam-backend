@@ -36,7 +36,7 @@ public class User extends AbstractEntity {
 	private String password;
 
 	@ManyToMany(fetch = FetchType.EAGER)
-	@JoinTable(name = GlobalConstants.DB_PREFIX + "USER_ROLES", joinColumns = { @JoinColumn(name = "ROLE_ID", nullable = false) },
+	@JoinTable(name = "USER_ROLES", joinColumns = { @JoinColumn(name = "ROLE_ID", nullable = false) },
 			inverseJoinColumns = { @JoinColumn(name = "USER_ID", nullable = false) })
 	private Set<Role> roles = new HashSet<>();
 

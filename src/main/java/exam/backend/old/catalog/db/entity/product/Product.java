@@ -18,7 +18,7 @@ import java.util.Set;
 
 
 @Entity
-@Table(name = GlobalConstants.DB_PREFIX + "PRODUCTS")
+@Table(name = "PRODUCTS")
 @Data
 @EqualsAndHashCode(callSuper = false, exclude = "distributors")
 //		exclude = { "name", "description", "productNumber" ,"producer"})

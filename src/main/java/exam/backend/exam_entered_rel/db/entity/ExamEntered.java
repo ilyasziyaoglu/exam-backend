@@ -1,16 +1,14 @@
 package exam.backend.exam_entered_rel.db.entity;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import exam.backend.common.constant.GlobalConstants;
 import exam.backend.common.db.entity.AbstractEntity;
 import exam.backend.exam.db.entity.Exam;
-import exam.backend.options.db.entity.Options;
-import exam.backend.questions.db.entity.Questions;
+import exam.backend.user_answers_rel.db.entity.UserAnswers;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
-import java.util.HashMap;
+import java.util.List;
 
 @Entity
 @Table(name = GlobalConstants.DB_PREFIX + "EXAM_ENTERED")
@@ -37,7 +35,7 @@ public class ExamEntered extends AbstractEntity {
     @JoinColumn(name = "exam_id", nullable = false)
     private Exam exam;
 
-    @ElementCollection(fetch=FetchType.LAZY)
-    @Column(name= GlobalConstants.DB_PREFIX + "USER_ANSWERS")
-    private HashMap<Questions, Options> userAnswers;
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name= "exam_entered_id")
+    private List<UserAnswers> userAnswers;
 }

@@ -8,7 +8,7 @@ import lombok.EqualsAndHashCode;
 import javax.persistence.*;
 
 @Entity
-@Table(name = GlobalConstants.DB_PREFIX + "PROPERTIES")
+@Table(name = "PROPERTIES")
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class Property extends AbstractEntity {

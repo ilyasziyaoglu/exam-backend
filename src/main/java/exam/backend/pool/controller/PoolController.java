@@ -15,7 +15,7 @@ import javax.annotation.Resource;
 //import exam.backend.common.config.security.TokenUtils;
 
 @RestController
-@RequestMapping("/options")
+@RequestMapping("/pool")
 public class PoolController extends BaseEntityController<PoolRequest, PoolResponse, Pool, PoolRepository, PoolService, PoolMapper> {
 
     @Resource

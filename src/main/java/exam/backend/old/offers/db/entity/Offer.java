@@ -19,7 +19,7 @@ import java.util.Set;
 
 
 @Entity
-@Table(name = GlobalConstants.DB_PREFIX + "OFFERS")
+@Table(name = "OFFERS")
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class Offer extends AbstractEntity {

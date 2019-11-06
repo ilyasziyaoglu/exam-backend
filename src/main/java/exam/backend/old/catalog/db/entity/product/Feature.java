@@ -9,7 +9,7 @@ import javax.persistence.*;
 
 
 @Entity
-@Table(name = GlobalConstants.DB_PREFIX + "FEATURES")
+@Table(name = "FEATURES")
 @Data
 @EqualsAndHashCode(callSuper = false)
 //		exclude = { "name", "description", "productNumber" ,"producer"})

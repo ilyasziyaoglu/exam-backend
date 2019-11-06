@@ -10,7 +10,7 @@ import lombok.EqualsAndHashCode;
 import javax.persistence.*;
 
 @Entity
-@Table(name = GlobalConstants.DB_PREFIX + "ROLES")
+@Table(name = "ROLES")
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class Role extends AbstractEntity {

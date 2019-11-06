@@ -10,7 +10,7 @@ import lombok.EqualsAndHashCode;
 import javax.persistence.*;
 
 @Entity
-@Table(name = GlobalConstants.DB_PREFIX + "PERMISSIONS")
+@Table(name = "PERMISSIONS")
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class Permission extends AbstractEntity {

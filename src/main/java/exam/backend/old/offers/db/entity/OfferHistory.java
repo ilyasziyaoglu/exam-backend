@@ -10,7 +10,7 @@ import javax.persistence.*;
 import java.time.ZonedDateTime;
 
 @Entity
-@Table(name = GlobalConstants.DB_PREFIX + "OFFERS_HISTORY")
+@Table(name = "OFFERS_HISTORY")
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class OfferHistory  {

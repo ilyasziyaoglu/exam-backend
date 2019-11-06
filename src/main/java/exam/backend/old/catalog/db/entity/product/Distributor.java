@@ -10,7 +10,7 @@ import lombok.EqualsAndHashCode;
 import javax.persistence.*;
 
 @Entity
-@Table(name = GlobalConstants.DB_PREFIX + "DISTRIBUTORS")
+@Table(name = "DISTRIBUTORS")
 @Data
 @EqualsAndHashCode(callSuper = false, exclude = "product")
 public class Distributor extends AbstractEntity {
