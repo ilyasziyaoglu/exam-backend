@@ -1,4 +1,4 @@
-package exam.backend.question_subject;
+package exam.backend.question_subject.db.entity;
 
 import exam.backend.common.constant.GlobalConstants;
 import exam.backend.common.db.entity.AbstractEntity;
@@ -19,6 +19,5 @@ public class QuestionSubject extends AbstractEntity {
     @GeneratedValue(generator = GlobalConstants.DB_PREFIX + "QUESTION_SUBJECT_ID_GEN", strategy = GenerationType.SEQUENCE)
     private int id;
 
-    @Column(name = "name")
     private String name;
 }

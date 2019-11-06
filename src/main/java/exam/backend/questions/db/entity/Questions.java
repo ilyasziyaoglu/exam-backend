@@ -1,10 +1,9 @@
 package exam.backend.questions.db.entity;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import exam.backend.common.constant.GlobalConstants;
 import exam.backend.common.db.entity.AbstractEntity;
 import exam.backend.options.db.entity.Options;
-import exam.backend.question_subject.QuestionSubject;
+import exam.backend.question_subject.db.entity.QuestionSubject;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
