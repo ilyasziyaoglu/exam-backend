@@ -32,7 +32,7 @@ public class Questions extends AbstractEntity {
     @JoinColumn(name = "question_id")
     private List<Options> options;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinColumn(name = "question_subject_id")
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
+    @JoinColumn(name = "question_subject_id", foreignKey=@ForeignKey(name="QUESTIONS_SUBJECT_MTO"), updatable = false)
     private QuestionSubject subject;
 }
