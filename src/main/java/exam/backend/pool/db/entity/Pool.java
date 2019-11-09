@@ -27,6 +27,6 @@ public class Pool extends AbstractEntity {
     private String name;
 
     @ManyToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "pool_id")
+    @JoinColumn(name = "pool_id", foreignKey=@ForeignKey(name="POOL_QUESTIONS_MTM"))
     private List<Questions> questions;
 }

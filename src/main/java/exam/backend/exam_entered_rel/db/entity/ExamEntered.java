@@ -32,10 +32,10 @@ public class ExamEntered extends AbstractEntity {
     private int examDuration;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
-    @JoinColumn(name = "exam_id", nullable = false)
+    @JoinColumn(name = "exam_id", foreignKey=@ForeignKey(name="EXAM_ENTERED_EXAM_MTO"), nullable = false)
     private Exam exam;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
-    @JoinColumn(name= "exam_entered_id")
+    @JoinColumn(name= "exam_entered_id", foreignKey=@ForeignKey(name="EXAM_ENTERED_USER_ANSWERS_OTM"))
     private List<UserAnswers> userAnswers;
 }

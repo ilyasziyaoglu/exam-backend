@@ -29,10 +29,10 @@ public class Questions extends AbstractEntity {
     private String imageUrl;
 
     @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
-    @JoinColumn(name = "question_id", updatable = false)
+    @JoinColumn(name = "question_id", foreignKey=@ForeignKey(name="QUESTIONS_OPTIONS_OTM"), updatable = false)
     private List<Options> options;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "question_subject_id", foreignKey=@ForeignKey(name="QUESTIONS_SUBJECT_MTO"), updatable = false)
+    @JoinColumn(name = "question_subject_id", foreignKey=@ForeignKey(name="QUESTIONS_QUESTION_SUBJECT_MTO"), updatable = false)
     private QuestionSubject subject;
 }

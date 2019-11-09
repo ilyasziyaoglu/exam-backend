@@ -54,14 +54,14 @@ public class Users extends AbstractEntity {
     private float moneyBalance;
 
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id", foreignKey=@ForeignKey(name="USERS_EXAM_ENTERED_OTM"))
     private List<ExamEntered> examsEntered;
 
     @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id", foreignKey=@ForeignKey(name="USERS_EXAM_OTM"))
     private List<Exam> examsCreated;
 
     @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
+    @JoinColumn(name = "user_id", foreignKey=@ForeignKey(name="USERS_POOL_OTM"))
     private List<Pool> pools;
 }

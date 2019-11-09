@@ -33,7 +33,7 @@ public class ExamQuestion extends AbstractEntity {
     private int optionCount;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "question_id", nullable = false)
+    @JoinColumn(name = "question_id", foreignKey=@ForeignKey(name="EXAM_QUESTION_QUESTION_MTO"), nullable = false)
     private Questions question;
 
 }

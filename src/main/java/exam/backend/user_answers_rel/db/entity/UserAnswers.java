@@ -22,10 +22,10 @@ public class UserAnswers extends AbstractEntity {
     private Long id;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
-    @JoinColumn(name = "question_id")
+    @JoinColumn(name = "question_id", foreignKey=@ForeignKey(name="USER_ANSWERS_QUESTIONS_MTO"))
     private Questions question;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
-    @JoinColumn(name = "option_id")
+    @JoinColumn(name = "option_id", foreignKey=@ForeignKey(name="USER_ANSWERS_OPTIONS_MTO"))
     private Options option;
 }
