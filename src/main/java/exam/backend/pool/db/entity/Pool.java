@@ -26,7 +26,7 @@ public class Pool extends AbstractEntity {
     @Column(name = "name")
     private String name;
 
-    @ManyToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "pool_id")
     private List<Questions> questions;
 }

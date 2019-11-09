@@ -32,7 +32,7 @@ public class ExamQuestion extends AbstractEntity {
     @Column(name = "option_count")
     private int optionCount;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "question_id", nullable = false)
     private Questions question;
 

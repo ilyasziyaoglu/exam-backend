@@ -1,6 +1,5 @@
 package exam.backend.common.util;
 
-import exam.backend.old.offers.db.entity.Offer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -28,11 +27,11 @@ public class MailUtils {
 			return false;
 		}
 	}
-
-	public static Map<String, Object> getofferMailDataModel(Offer offer) {
-		Map<String, Object> map = new HashMap<String, Object>();
-		map.put("offer", offer);
-		return map;
-	}
+//
+//	public static Map<String, Object> getofferMailDataModel(Offer offer) {
+//		Map<String, Object> map = new HashMap<String, Object>();
+//		map.put("offer", offer);
+//		return map;
+//	}
 
 }

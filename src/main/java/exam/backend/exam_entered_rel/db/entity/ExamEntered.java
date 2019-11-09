@@ -31,11 +31,11 @@ public class ExamEntered extends AbstractEntity {
     @Column(name = "exam_duration")
     private int examDuration;
 
-    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     @JoinColumn(name = "exam_id", nullable = false)
     private Exam exam;
 
-    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     @JoinColumn(name= "exam_entered_id")
     private List<UserAnswers> userAnswers;
 }

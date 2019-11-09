@@ -21,11 +21,11 @@ public class UserAnswers extends AbstractEntity {
     @GeneratedValue(generator = GlobalConstants.DB_PREFIX + "USER_ANSWERS_ID_GEN", strategy = GenerationType.SEQUENCE)
     private Long id;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     @JoinColumn(name = "question_id")
     private Questions question;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     @JoinColumn(name = "option_id")
     private Options option;
 }

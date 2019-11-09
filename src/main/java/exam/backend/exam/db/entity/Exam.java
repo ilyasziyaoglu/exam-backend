@@ -40,11 +40,11 @@ public class Exam extends AbstractEntity {
 	@Column(name = "question_count")
 	private int questionCount;
 
-	@ManyToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "exam_type")
 	private ExamType examType;
 
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
 	@JoinColumn(name = "exam_id")
 	private List<ExamQuestion> examQuestions;
 
