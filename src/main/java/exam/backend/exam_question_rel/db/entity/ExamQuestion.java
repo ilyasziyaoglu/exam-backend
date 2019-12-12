@@ -1,18 +1,15 @@
 package exam.backend.exam_question_rel.db.entity;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import exam.backend.common.constant.GlobalConstants;
 import exam.backend.common.db.entity.AbstractEntity;
-import exam.backend.exam.db.entity.Exam;
-import exam.backend.questions.db.entity.Questions;
+import exam.backend.questions.db.entity.Question;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
-import java.util.List;
 
 @Entity
-@Table(name = GlobalConstants.DB_PREFIX + "EXAM_QUESTION")
+@Table(name = GlobalConstants.DB_PREFIX + "SUBJECT_QUESTION")
 @Data
 @EqualsAndHashCode(callSuper = false)
 public class ExamQuestion extends AbstractEntity {
@@ -26,14 +23,11 @@ public class ExamQuestion extends AbstractEntity {
     @Column(name = "question_order")
     private int questionOrder;
 
-    @Column
-    private int point;
-
     @Column(name = "option_count")
     private int optionCount;
 
     @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "question_id", foreignKey=@ForeignKey(name="EXAM_QUESTION_QUESTION_MTO"), nullable = false)
-    private Questions question;
+    @JoinColumn(name = "question_id", foreignKey=@ForeignKey(name="SUBJECT_QUESTION_QUESTION_MTO"), nullable = false)
+    private Question question;
 
 }

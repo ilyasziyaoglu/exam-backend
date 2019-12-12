@@ -1,7 +1,7 @@
 package exam.backend.question_subject.controller;
 
 import exam.backend.common.controller.BaseEntityController;
-import exam.backend.question_subject.db.entity.QuestionSubject;
+import exam.backend.question_subject.db.entity.Subject;
 import exam.backend.question_subject.db.mapper.QuestionSubjectMapper;
 import exam.backend.question_subject.db.repository.QuestionSubjectRepository;
 import exam.backend.question_subject.service.QuestionSubjectService;
@@ -16,7 +16,7 @@ import javax.annotation.Resource;
 
 @RestController
 @RequestMapping("/question_subject")
-public class QuestionSubjectController extends BaseEntityController<QuestionSubjectRequest, QuestionSubjectResponse, QuestionSubject, QuestionSubjectRepository, QuestionSubjectService, QuestionSubjectMapper> {
+public class QuestionSubjectController extends BaseEntityController<QuestionSubjectRequest, QuestionSubjectResponse, Subject, QuestionSubjectRepository, QuestionSubjectService, QuestionSubjectMapper> {
 
     @Resource
     private QuestionSubjectService questionSubjectService;

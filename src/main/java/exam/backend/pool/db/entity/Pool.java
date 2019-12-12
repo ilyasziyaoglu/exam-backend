@@ -1,10 +1,8 @@
 package exam.backend.pool.db.entity;
 
-import com.fasterxml.jackson.annotation.JsonManagedReference;
 import exam.backend.common.constant.GlobalConstants;
 import exam.backend.common.db.entity.AbstractEntity;
-import exam.backend.questions.db.entity.Questions;
-import exam.backend.users.db.entity.Users;
+import exam.backend.questions.db.entity.Question;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -28,5 +26,5 @@ public class Pool extends AbstractEntity {
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "pool_id", foreignKey=@ForeignKey(name="POOL_QUESTIONS_MTM"))
-    private List<Questions> questions;
+    private List<Question> questions;
 }

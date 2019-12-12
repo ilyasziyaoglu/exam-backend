@@ -3,7 +3,7 @@ package exam.backend.questions.db.entity;
 import exam.backend.common.constant.GlobalConstants;
 import exam.backend.common.db.entity.AbstractEntity;
 import exam.backend.options.db.entity.Options;
-import exam.backend.question_subject.db.entity.QuestionSubject;
+import exam.backend.question_subject.db.entity.Subject;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -14,7 +14,7 @@ import java.util.List;
 @Table(name = GlobalConstants.DB_PREFIX + "QUESTIONS")
 @Data
 @EqualsAndHashCode(callSuper = false)
-public class Questions extends AbstractEntity {
+public class Question extends AbstractEntity {
 
     @Id
     @Column(name = "id", nullable = false)
@@ -34,5 +34,5 @@ public class Questions extends AbstractEntity {
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "question_subject_id", foreignKey=@ForeignKey(name="QUESTIONS_QUESTION_SUBJECT_MTO"), updatable = false)
-    private QuestionSubject subject;
+    private Subject subject;
 }

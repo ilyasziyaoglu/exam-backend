@@ -7,8 +7,6 @@ import exam.backend.options.db.repository.OptionsRepository;
 import exam.backend.options.service.OptionsService;
 import exam.client.options.request.OptionsRequest;
 import exam.client.options.response.OptionsResponse;
-import exam.client.questions.request.QuestionsRequest;
-import exam.client.questions.response.QuestionsResponse;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

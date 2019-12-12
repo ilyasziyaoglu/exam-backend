@@ -3,7 +3,7 @@ package exam.backend.user_answers_rel.db.entity;
 import exam.backend.common.constant.GlobalConstants;
 import exam.backend.common.db.entity.AbstractEntity;
 import exam.backend.options.db.entity.Options;
-import exam.backend.questions.db.entity.Questions;
+import exam.backend.questions.db.entity.Question;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -23,7 +23,7 @@ public class UserAnswers extends AbstractEntity {
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     @JoinColumn(name = "question_id", foreignKey=@ForeignKey(name="USER_ANSWERS_QUESTIONS_MTO"))
-    private Questions question;
+    private Question question;
 
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     @JoinColumn(name = "option_id", foreignKey=@ForeignKey(name="USER_ANSWERS_OPTIONS_MTO"))
